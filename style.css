@@ -1,0 +1,126 @@
+/* Применяем box-sizing: border-box ко всем элементам */
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    position: relative; /* Чтобы фоны позиционировались относительно body */
+    margin: 0; /* Убираем возможные отступы */
+    padding: 0;
+    background-color: #f8f8f8; /* Цвет фона для всей страницы */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding: 16px 24px 16px 16px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-block: 30px; /* Отступ сверху и снизу, чтобы избежать слипания */
+    border-radius: 24px;
+    background: rgba(225, 204, 225, 0.22); /* Светло-серый с прозрачностью */
+    backdrop-filter: blur(10px); /* Эффект размытия фона за элементом */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: all 0.3s ease; /* Плавные переходы для интерактивности */
+    max-width: 700px;
+}
+a:hover {
+    background: rgba(255, 255, 255, 0.4); /* Меняем фон при наведении */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Усиливаем тень */
+  }
+
+h1{
+    font-family: unbounded;
+    margin-block-end: 66px;
+    margin-block-start: 100px;
+}
+
+h3 {
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    font-family: unbounded;
+    font-size: 24px;
+}
+
+p{
+    font-family: inter;
+    margin-block-end: 0px;
+}
+
+main {
+    display: flex; /* Включаем flex-контейнер */
+    justify-content: center; /* Центрируем по горизонтали */
+
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-block: 30px;
+    margin-block-end: 100px;
+    
+}
+
+.card {
+
+}
+
+.cardImg {
+    height: 66px;
+    width: 66px;
+    border-radius: 12px;
+    margin-right: 24px;
+}
+
+
+
+
+.background-image {
+    position: absolute;
+    width: 50vw; /* Половина ширины экрана */
+    height: 50vw; /* Соотношение 1:1 */
+    max-width: 50vh; /* Поддержка для горизонтальных экранов */
+    max-height: 50vh;
+    background-size: cover; /* Покрытие полностью */
+    background-position: center; /* Центрирование */
+    z-index: -1; /* За остальными элементами */
+}
+
+.background-image.two {
+    bottom: -10%; /* На треть за границей экрана */
+    left:-6%;
+    background-image: url('https://i.imgur.com/Jvj6d5v.png');
+    position: fixed;
+}
+.background-image.one {
+    top: -10%; /* На треть за границей экрана */
+    right:-7%;
+    background-image: url('https://i.imgur.com/Jvj6d5v.png');
+    position: fixed;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background: rgba(205, 192, 205, 0.15); /* Светло-серый с прозрачностью */
+    backdrop-filter: blur(10px); /* Эффект размытия фона за элементом */
+    padding: 16px;
+    color: #ff6fdf;
+    position: fixed;  /* Фиксируем хедер */
+    top: 0;           /* Привязываем его к верхней части страницы */
+    left: 0;          /* Привязываем его к левой стороне */
+    width: 100%;      /* Ширина на всю страницу */
+    z-index: 1000;    /* Обеспечивает, чтобы хедер был выше других элементов */
+}
+h2{
+    font-family: Unbounded;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
+
